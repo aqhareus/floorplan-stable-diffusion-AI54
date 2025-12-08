@@ -30,3 +30,16 @@ We fine-tune Stable Diffusion on a curated dataset of real Zellige patterns usin
 ---
 
 ## 📁 Repository Structure
+
+zellige-stable-diffusion/
+│
+├── notebooks/
+│ ├── train_lora.ipynb # Main LoRA fine-tuning notebook
+│ ├── inference_lora.ipynb # Notebook for generating patterns
+│
+├── results/
+│ ├── example_before.png
+│ ├── example_after.png
+│
+├── README.md
+└── .gitignore
