@@ -29,6 +29,10 @@ We use the following dataset from Hugging Face:
 
 https://huggingface.co/datasets/zimhe/pseudo-floor-plan-12k
 
+or also, we can use the dataset from CubiCasa5k :
+
+https://gts.ai/dataset-download/cubicasa5k/#wpcf7-f47097-o1
+
 ### Dataset characteristics:
 
 - Approximately 12,000 floor plan images
