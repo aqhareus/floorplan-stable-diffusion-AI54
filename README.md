@@ -1,45 +1,126 @@
-# 🟦 Moroccan Zellige Pattern Generation  
-### Stable Diffusion LoRA Fine-Tuning Project (UTBM — AI54)
+##AI54 – Floor Plan Image Generation with Stable Diffusion
+Project Overview
 
-This project aims to fine-tune **Stable Diffusion v1.5** using **LoRA (Low-Rank Adaptation)** in order to generate high-quality **Moroccan Zellige patterns** — including 8-point stars, cross patterns, octagonal structures, and full mosaic layouts.
+This project is developed as part of the AI54 course.
+The objective is to fine-tune a pre-trained Stable Diffusion model for image generation using a structured dataset of architectural floor plans.
 
-The model learns:
-- Zellige geometric symmetry  
-- Ceramic texture  
-- Moroccan color palettes  
-- Complex interlaced mosaic structures  
+The project focuses on adapting an existing generative model (fine-tuning), not training a model from scratch, in accordance with the course requirements.
 
-This repository contains the full code for dataset loading, preprocessing, LoRA training, and inference.
+We chose the floor plan domain because it provides structured visual data with available textual descriptions, enabling a cleaner and more reliable fine-tuning process compared to unannotated image datasets.
 
----
+Motivation
 
-## 📌 Project Overview
+Initial experimentation with artistic pattern datasets revealed a major limitation: the absence of ground truth or textual annotations (captions).
+Since Stable Diffusion relies on text–image alignment, the lack of captions makes effective fine-tuning unreliable.
 
-Zellige is a traditional Moroccan art form based on:
-- the **Sceau** (8-point star),
-- the **Saft** tile,
-- and four geometric base tiles described in mathematical literature.
+The floor plan dataset solves this issue by providing:
 
-The objective of this project is to reproduce these geometric arrangements using generative AI.
+Structured visual content
 
-We fine-tune Stable Diffusion on a curated dataset of real Zellige patterns using **LoRA**, which allows:
-- lightweight training (only training attention layers),
-- fast convergence,
-- shareable model weights.
+Existing captions
 
----
+High interpretability of generated results
 
-## 📁 Repository Structure
+Strong alignment with the methods studied in class (TDs)
 
-zellige-stable-diffusion/
-│
+Dataset
+
+We use the following dataset from Hugging Face:
+
+https://huggingface.co/datasets/zimhe/pseudo-floor-plan-12k
+
+Dataset characteristics:
+
+Approximately 12,000 floor plan images
+
+Paired with textual captions
+
+Synthetic but consistent architectural layouts
+
+Suitable for text-to-image generation tasks
+
+Optional caption enrichment can be performed using models such as BLIP or CLIP if needed.
+
+Methodology
+
+Dataset preparation
+
+Load images and captions
+
+Clean and normalize text descriptions
+
+Resize images to Stable Diffusion-compatible resolution
+
+Model selection
+
+Pre-trained Stable Diffusion model
+
+Fine-tuning using LoRA to reduce computational cost
+
+Fine-tuning
+
+Train LoRA adapters on the floor plan dataset
+
+Keep base model frozen
+
+Optimize text–image alignment
+
+Evaluation
+
+Visual inspection of generated floor plans
+
+Comparison between base model outputs and fine-tuned outputs
+
+Analysis of layout consistency and caption adherence
+
+Tools and Libraries
+
+Python
+
+PyTorch
+
+Hugging Face Diffusers
+
+Transformers
+
+Accelerate
+
+Stable Diffusion
+
+LoRA
+
+Experiments are designed to be compatible with Google Colab.
+
+Project Structure
+.
+├── data/
+│   └── floor_plan_dataset/
 ├── notebooks/
-│ ├── train_lora.ipynb # Main LoRA fine-tuning notebook
-│ ├── inference_lora.ipynb # Notebook for generating patterns
-│
+│   ├── data_exploration.ipynb
+│   ├── caption_analysis.ipynb
+│   └── fine_tuning_lora.ipynb
+├── models/
+│   └── lora_weights/
 ├── results/
-│ ├── example_before.png
-│ ├── example_after.png
-│
+│   └── generated_images/
 ├── README.md
-└── .gitignore
+
+Expected Results
+
+Generation of realistic and coherent floor plan images
+
+Improved alignment between textual prompts and generated layouts
+
+Clear visual difference between the base Stable Diffusion model and the fine-tuned version
+
+Team Organization
+
+This is a group project. Tasks are distributed as follows:
+
+Dataset analysis and preprocessing
+
+Model fine-tuning and training
+
+Evaluation and visualization
+
+Report writing and presentation
