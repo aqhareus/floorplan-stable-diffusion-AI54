@@ -1,5 +1,5 @@
-##AI54 – Floor Plan Image Generation with Stable Diffusion
-Project Overview
+# AI54 – Floor Plan Image Generation with Stable Diffusion
+## Project Overview
 
 This project is developed as part of the AI54 course.
 The objective is to fine-tune a pre-trained Stable Diffusion model for image generation using a structured dataset of architectural floor plans.
@@ -8,90 +8,90 @@ The project focuses on adapting an existing generative model (fine-tuning), not 
 
 We chose the floor plan domain because it provides structured visual data with available textual descriptions, enabling a cleaner and more reliable fine-tuning process compared to unannotated image datasets.
 
-Motivation
+## Motivation
 
 Initial experimentation with artistic pattern datasets revealed a major limitation: the absence of ground truth or textual annotations (captions).
 Since Stable Diffusion relies on text–image alignment, the lack of captions makes effective fine-tuning unreliable.
 
 The floor plan dataset solves this issue by providing:
 
-Structured visual content
+- Structured visual content
 
-Existing captions
+- Existing captions
 
-High interpretability of generated results
+- High interpretability of generated results
 
-Strong alignment with the methods studied in class (TDs)
+- Strong alignment with the methods studied in class (TDs)
 
-Dataset
+## Dataset
 
 We use the following dataset from Hugging Face:
 
 https://huggingface.co/datasets/zimhe/pseudo-floor-plan-12k
 
-Dataset characteristics:
+### Dataset characteristics:
 
-Approximately 12,000 floor plan images
+- Approximately 12,000 floor plan images
 
-Paired with textual captions
+- Paired with textual captions
 
-Synthetic but consistent architectural layouts
+- Synthetic but consistent architectural layouts
 
-Suitable for text-to-image generation tasks
+- Suitable for text-to-image generation tasks
 
 Optional caption enrichment can be performed using models such as BLIP or CLIP if needed.
 
-Methodology
+## Methodology
 
-Dataset preparation
+- Dataset preparation
 
-Load images and captions
+- Load images and captions
 
-Clean and normalize text descriptions
+- Clean and normalize text descriptions
 
-Resize images to Stable Diffusion-compatible resolution
+- Resize images to Stable Diffusion-compatible resolution
 
-Model selection
+## Model selection
 
-Pre-trained Stable Diffusion model
+- Pre-trained Stable Diffusion model
 
-Fine-tuning using LoRA to reduce computational cost
+- Fine-tuning using LoRA to reduce computational cost
 
-Fine-tuning
+- Fine-tuning
 
-Train LoRA adapters on the floor plan dataset
+- Train LoRA adapters on the floor plan dataset
 
-Keep base model frozen
+- Keep base model frozen
 
-Optimize text–image alignment
+- Optimize text–image alignment
 
-Evaluation
+- Evaluation
 
-Visual inspection of generated floor plans
+- Visual inspection of generated floor plans
 
-Comparison between base model outputs and fine-tuned outputs
+- Comparison between base model outputs and fine-tuned outputs
 
-Analysis of layout consistency and caption adherence
+- Analysis of layout consistency and caption adherence
 
-Tools and Libraries
+## Tools and Libraries
 
-Python
+- Python
 
-PyTorch
+- PyTorch
 
-Hugging Face Diffusers
+- Hugging Face Diffusers
 
-Transformers
+- Transformers
 
-Accelerate
+- Accelerate
 
-Stable Diffusion
+- Stable Diffusion
 
-LoRA
+- LoRA
 
 Experiments are designed to be compatible with Google Colab.
 
-Project Structure
+## Project Structure
 .
 ├── data/
 │   └── floor_plan_dataset/
@@ -105,22 +105,22 @@ Project Structure
 │   └── generated_images/
 ├── README.md
 
-Expected Results
+## Expected Results
 
-Generation of realistic and coherent floor plan images
+- Generation of realistic and coherent floor plan images
 
-Improved alignment between textual prompts and generated layouts
+- Improved alignment between textual prompts and generated layouts
 
-Clear visual difference between the base Stable Diffusion model and the fine-tuned version
+- Clear visual difference between the base Stable Diffusion model and the fine-tuned version
 
-Team Organization
+## Team Organization
 
 This is a group project. Tasks are distributed as follows:
 
-Dataset analysis and preprocessing
+- Dataset analysis and preprocessing
 
-Model fine-tuning and training
+- Model fine-tuning and training
 
-Evaluation and visualization
+- Evaluation and visualization
 
-Report writing and presentation
+- Report writing and presentation
