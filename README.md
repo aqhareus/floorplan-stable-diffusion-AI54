@@ -1,5 +1,4 @@
 # AI54 – Floor Plan Image Generation with Stable Diffusion
-Test
 ## Project Overview
 
 This project is developed as part of the AI54 course.
