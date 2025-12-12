@@ -29,10 +29,6 @@ We use the following dataset from Hugging Face:
 
 https://huggingface.co/datasets/zimhe/pseudo-floor-plan-12k
 
-or also, we can use the dataset from CubiCasa5k :
-
-https://gts.ai/dataset-download/cubicasa5k/#wpcf7-f47097-o1
-
 ### Dataset characteristics:
 
 - Approximately 12,000 floor plan images
@@ -42,6 +38,10 @@ https://gts.ai/dataset-download/cubicasa5k/#wpcf7-f47097-o1
 - Synthetic but consistent architectural layouts
 
 - Suitable for text-to-image generation tasks
+
+or also, we can use the CubiCasa5k dataset from Kaggle:
+
+https://www.kaggle.com/datasets/qmarva/cubicasa5k
 
 Optional caption enrichment can be performed using models such as BLIP or CLIP if needed.
 
