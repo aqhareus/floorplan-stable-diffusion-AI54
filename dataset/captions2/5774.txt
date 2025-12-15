@@ -1,0 +1,1 @@
+architectural blueprint of a apartment, top-down view, with 2 bedrooms, 2 bathrooms, 1 kitchen, 1 living room, 1 corridor and 25 doors and 18 windows

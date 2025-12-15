@@ -1,0 +1,1 @@
+architectural blueprint of a apartment, top-down view, with 2 bedrooms, 2 bathrooms, 1 open-plan kitchen connected to 1 living room, 1 corridor, 2 balcony or outdoor areas and 12 doors and 6 windows
