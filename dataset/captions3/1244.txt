@@ -1,0 +1,1 @@
+top-down apartment layout showing 1 kitchen, 1 corridor, rendered as a clean black-and-white architectural drawing with 6 doors and 3 windows

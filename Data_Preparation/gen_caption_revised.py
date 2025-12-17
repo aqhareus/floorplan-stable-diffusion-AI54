@@ -247,8 +247,10 @@ def generate_for_selected_images(
 
 
 if __name__ == "__main__":
-    IMAGE_DIR = Path(r"D:\\Documents\\UTBM\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\dataset\\images")
+    IMAGE_DIR = Path(r"D:\\Documents\\UTBM\\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\high_quality_png")
+    # IMAGE_DIR = Path(r"D:\\Documents\\UTBM\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\dataset\\images")
     SVG_ROOT = Path(r"D:\\Documents\\UTBM\\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\high_quality")
-    CAPTION_DIR = Path(r"D:\\Documents\\UTBM\\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\dataset\\captions2")
+    CAPTION_DIR = Path(r"D:\\Documents\\UTBM\\SEM-5\\AI54\\Project\\cubicasa5k\\cubicasa5k\\dataset\\captions3")
+    
 
     generate_for_selected_images(IMAGE_DIR, SVG_ROOT, CAPTION_DIR)
